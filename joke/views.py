@@ -9,3 +9,5 @@ def home(request, joke_num):
     print(next)
     return render(request, 'index.html',
                   {'url': str(joke_num + 1 if next > joke_num else ''),'previous_url':str(joke_num-1 if joke_num>1 else ''), 'joke': Joke.objects.get(id=joke_num).joke})
+def nived(request):
+    return render(request,'nived.html')
