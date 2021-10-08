@@ -8,4 +8,4 @@ def home(request, joke_num):
     next = max(list(map(lambda x: x.id, list(jokes))))
     print(next)
     return render(request, 'index.html',
-                  {'url': str(joke_num + 1 if next > joke_num else ''), 'joke': Joke.objects.get(id=joke_num)})
+                  {'url': str(joke_num + 1 if next > joke_num else ''),'previous_url':str(joke_num-1 if joke_num>1 else ''), 'joke': Joke.objects.get(id=joke_num)})

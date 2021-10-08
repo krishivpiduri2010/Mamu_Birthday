@@ -10,8 +10,11 @@
 		<p style="text-align:center;color:white;font-size:3em;">What did one snowman say to the other? Do you smell carrots?</p>
 		</blockquote>
 	</figure>
-	{% if True %}
+	{% if url %}
 	<a href="{{url}}" style="bottom:0px;background-color:blue;padding:10px;border-radius:5px;color:white;text-decoration:none;">Next</a>
+	{% endif %}
+	{% if previous_url %}
+	<a href="{{previous_url}}" style="bottom:0px;background-color:blue;padding:10px;border-radius:5px;color:white;text-decoration:none;">Previous</a>
 	{% endif %}
 </body>
 </html>
