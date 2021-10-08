@@ -3,5 +3,5 @@ from django.urls import path
 
 urlpatterns = [
     path('<int:joke_num>', home),
-    path('nived', home),
+    path('nived', nived),
 ]
